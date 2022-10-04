@@ -1,4 +1,3 @@
-.fvm/
 .DS_Store
 .dart_tool/
 
@@ -47,3 +46,13 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+# Flutter Version Manager.
+.fvm/
+
+# Generated files.
+*.g.dart
+*.freezed.dart
+# remove all file from the generated folder excluded the locales.g.dart file.
+/lib/generated/*
+!/lib/generated/locales.g.dart
