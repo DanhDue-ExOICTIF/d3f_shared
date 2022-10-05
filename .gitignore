@@ -56,3 +56,4 @@ app.*.map.json
 # remove all file from the generated folder excluded the locales.g.dart file.
 /lib/generated/*
 !/lib/generated/locales.g.dart
+!/lib/generated/assets.gen.dart
