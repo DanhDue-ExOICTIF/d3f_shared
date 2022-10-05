@@ -55,13 +55,13 @@ flutter_gen:
       class_name: MyAssets
       package_parameter_enabled: false
       # Assets.imagesChip
-      style: camel-case
+      # style: camel-case
 
       # Assets.images_chip
       # style: snake-case
 
       # Assets.images.chip (default style)
-      # style: dot-delimiter
+      style: dot-delimiter
 
 #    exclude:
 #      - assets/images/chip3/chip3.jpg

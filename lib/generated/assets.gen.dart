@@ -12,24 +12,36 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/coin_logo.svg
+  SvgGenImage get coinLogo => const SvgGenImage('assets/images/coin_logo.svg');
+
+  /// File path: assets/images/ic_splash_background.png
+  AssetGenImage get icSplashBackground =>
+      const AssetGenImage('assets/images/ic_splash_background.png');
+
+  /// List of all assets
+  List<dynamic> get values => [coinLogo, icSplashBackground];
+}
+
+class $AssetsLottiesGen {
+  const $AssetsLottiesGen();
+
+  /// File path: assets/lotties/splash_animation.json
+  LottieGenImage get splashAnimation =>
+      const LottieGenImage('assets/lotties/splash_animation.json');
+
+  /// List of all assets
+  List<LottieGenImage> get values => [splashAnimation];
+}
+
 class MyAssets {
   MyAssets._();
 
-  /// File path: assets/images/coin_logo.svg
-  static const SvgGenImage imagesCoinLogo =
-      SvgGenImage('assets/images/coin_logo.svg');
-
-  /// File path: assets/images/ic_splash_background.png
-  static const AssetGenImage imagesIcSplashBackground =
-      AssetGenImage('assets/images/ic_splash_background.png');
-
-  /// File path: assets/lotties/splash_animation.json
-  static const LottieGenImage lottiesSplashAnimation =
-      LottieGenImage('assets/lotties/splash_animation.json');
-
-  /// List of all assets
-  List<dynamic> get values =>
-      [imagesCoinLogo, imagesIcSplashBackground, lottiesSplashAnimation];
+  static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
 }
 
 class AssetGenImage {
