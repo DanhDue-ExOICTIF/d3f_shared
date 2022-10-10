@@ -1,4 +1,7 @@
 library shared;
 
-export 'package:d3f_shared/generated/assets.gen.dart';
-export 'package:d3f_shared/generated/locales.g.dart';
+export 'extensions/extensions.dart';
+export 'generated/generated.dart';
+export 'styles/styles.dart';
+export 'utils/utils.dart';
+export 'widgets/widgets.dart';

@@ -12,13 +12,22 @@ class AppTranslation {
 class LocaleKeys {
   LocaleKeys._();
   static const homePageTitle = 'homePageTitle';
+  static const ratings = 'ratings';
+  static const gradeNow = 'gradeNow';
+  static const reload = 'reload';
 }
 
 class Locales {
   static const vn_VI = {
     'homePageTitle': 'Đăng nhập - Trang chủ',
+    'ratings': 'Đánh giá',
+    'gradeNow': 'Chọn ngay',
+    'reload': 'Tải lại',
   };
   static const en_US = {
     'homePageTitle': 'Login - Home Page',
+    'ratings': 'Ratings',
+    'gradeNow': 'Grade now',
+    'reload': 'Reload',
   };
 }
