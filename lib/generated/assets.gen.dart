@@ -37,8 +37,8 @@ class $AssetsLottiesGen {
   List<LottieGenImage> get values => [splashAnimation];
 }
 
-class MyAssets {
-  MyAssets._();
+class SharedAssets {
+  SharedAssets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
@@ -69,7 +69,7 @@ class AssetGenImage {
     bool matchTextDirection = false,
     bool gaplessPlayback = false,
     bool isAntiAlias = false,
-    String? package,
+    String? package = 'd3f_shared',
     FilterQuality filterQuality = FilterQuality.low,
     int? cacheWidth,
     int? cacheHeight,
@@ -106,7 +106,7 @@ class AssetGenImage {
 
   String get path => _assetName;
 
-  String get keyName => _assetName;
+  String get keyName => 'packages/d3f_shared/$_assetName';
 }
 
 class SvgGenImage {
@@ -118,7 +118,7 @@ class SvgGenImage {
     Key? key,
     bool matchTextDirection = false,
     AssetBundle? bundle,
-    String? package,
+    String? package = 'd3f_shared',
     double? width,
     double? height,
     BoxFit fit = BoxFit.contain,
@@ -181,7 +181,7 @@ class LottieGenImage {
     double? height,
     BoxFit? fit,
     AlignmentGeometry? alignment,
-    String? package,
+    String? package = 'd3f_shared',
     bool? addRepaintBoundary,
     FilterQuality? filterQuality,
     void Function(String)? onWarning,
