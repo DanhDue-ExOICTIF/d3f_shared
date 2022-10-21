@@ -67,6 +67,11 @@ flutter_gen:
       # Assets.images.chip (default style)
       style: dot-delimiter
 
+  fonts:
+    enabled: true
+    outputs:
+      class_name: SharedFontFamily
+
 flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
@@ -75,6 +80,27 @@ flutter:
   assets:
     - assets/images/
     - assets/lotties/
+
+  fonts:
+    - family: Raleway
+      fonts:
+        - asset: assets/fonts/Raleway-Regular.ttf
+        - asset: assets/fonts/Raleway-Italic.ttf
+          style: italic
+    - family: RobotoMono
+      fonts:
+        - asset: assets/fonts/RobotoMono-Regular.ttf
+        - asset: assets/fonts/RobotoMono-Bold.ttf
+          weight: 700
+    - family: Sakkal-Majalla
+      fonts:
+        - asset: assets/fonts/Sakkal-Majalla.ttf
+          weight: 400
+    - family: Trebuchet
+      fonts:
+        - asset: assets/fonts/Trebuchet-MS.ttf
+        - asset: assets/fonts/Trebuchet-MS-Italic.ttf
+          weight: 400
 
   # This section identifies your Flutter project as a module meant for
   # embedding in a native host app.  These identifiers should _not_ ordinarily
