@@ -1,5 +1,4 @@
 import 'package:d3f_dependency_manager/dependency_manager.dart';
-import 'package:d3f_shared/utils/sizes.dart';
 import 'package:flutter/material.dart';
 
 class CircleProgress extends StatelessWidget {

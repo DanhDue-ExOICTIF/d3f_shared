@@ -1,9 +1,7 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:d3f_dependency_manager/dependency_manager.dart';
-import 'package:d3f_shared/extensions/string_ext.dart';
-import 'package:d3f_shared/utils/sizes.dart';
-import 'package:d3f_shared/widgets/errors/error_image.dart';
-import 'package:d3f_shared/widgets/progress/loading_indicator.dart';
 import 'package:flutter/material.dart';
 
 class CardCrew extends StatelessWidget {
@@ -40,7 +38,7 @@ class CardCrew extends StatelessWidget {
               height: Sizes.width(context) / 3,
               width: Sizes.width(context) / 4.4,
               fit: BoxFit.cover,
-              placeholder: (context, url) => LoadingIndicator(),
+              placeholder: (context, url) => const LoadingIndicator(),
               errorWidget: (context, url, error) => const ErrorImage(),
             ),
           ),
