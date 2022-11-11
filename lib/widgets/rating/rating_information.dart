@@ -1,5 +1,6 @@
 // ignore_for_file: depend_on_referenced_packages
 
+import 'package:d3f_shared/generated/colors.gen.dart';
 import 'package:d3f_shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -33,8 +34,7 @@ class RatingInformation extends StatelessWidget {
       children: [
         buildRatingBar(theme, context, rating ?? 0.0),
         Padding(
-          padding: EdgeInsets.only(
-              top: Sizes.dp4(context), left: Sizes.dp4(context)),
+          padding: EdgeInsets.only(top: Sizes.dp4(context), left: Sizes.dp4(context)),
           child: Text(LocaleKeys.gradeNow.tr),
         ),
       ],
@@ -54,7 +54,7 @@ class RatingInformation extends StatelessWidget {
 Widget buildRatingBar(ThemeData theme, BuildContext context, double rating) {
   var stars = <Widget>[];
   for (var i = 1; i <= 5; i++) {
-    var color = i <= rating / 2 ? theme.colorScheme.secondary : D3FColor.grey;
+    var color = i <= rating / 2 ? theme.colorScheme.secondary : D3FColors.grey;
     var star = Icon(
       Icons.star,
       color: color,

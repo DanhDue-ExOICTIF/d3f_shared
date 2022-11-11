@@ -15,6 +15,7 @@ class LocaleKeys {
   static const ratings = 'ratings';
   static const gradeNow = 'gradeNow';
   static const reload = 'reload';
+  static const login = 'login';
 }
 
 class Locales {
@@ -23,11 +24,13 @@ class Locales {
     'ratings': 'Đánh giá',
     'gradeNow': 'Chọn ngay',
     'reload': 'Tải lại',
+    'login': 'Đăng nhập',
   };
   static const en_US = {
     'homePageTitle': 'Login - Home Page',
     'ratings': 'Ratings',
     'gradeNow': 'Grade now',
     'reload': 'Reload',
+    'login': 'Login',
   };
 }
