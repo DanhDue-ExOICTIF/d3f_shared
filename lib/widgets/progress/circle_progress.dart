@@ -1,4 +1,5 @@
 import 'package:d3f_dependency_manager/dependency_manager.dart';
+import 'package:d3f_shared/generated/colors.gen.dart';
 import 'package:flutter/material.dart';
 
 class CircleProgress extends StatelessWidget {
@@ -18,7 +19,7 @@ class CircleProgress extends StatelessWidget {
               width: Sizes.width(context) / 10,
               height: Sizes.width(context) / 10,
               decoration: BoxDecoration(
-                color: D3FColor.blueGrey,
+                color: D3FColors.blueGrey,
                 borderRadius: BorderRadius.circular(
                   Sizes.dp20(context),
                 ),
@@ -32,11 +33,11 @@ class CircleProgress extends StatelessWidget {
               child: CircularProgressIndicator(
                 strokeWidth: 3.0,
                 valueColor: AlwaysStoppedAnimation<Color>(
-                  D3FColor.getColorCircleProgress(
+                  ColorExtension.getColorCircleProgress(
                     double.parse(vote ?? ""),
                   ),
                 ),
-                backgroundColor: D3FColor.grey,
+                backgroundColor: D3FColors.grey,
                 value: double.parse(vote ?? "") / 10.0,
               ),
             ),
@@ -51,7 +52,7 @@ class CircleProgress extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w700,
                     fontSize: Sizes.dp10(context),
-                    color: D3FColor.white,
+                    color: D3FColors.white,
                   ),
                 ),
               ),

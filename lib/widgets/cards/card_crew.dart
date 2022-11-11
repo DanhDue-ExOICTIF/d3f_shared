@@ -2,6 +2,7 @@
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:d3f_dependency_manager/dependency_manager.dart';
+import 'package:d3f_shared/generated/colors.gen.dart';
 import 'package:flutter/material.dart';
 
 class CardCrew extends StatelessWidget {
@@ -14,20 +15,19 @@ class CardCrew extends StatelessWidget {
     return SizedBox(
       width: Sizes.width(context) / 4.4,
       child: Card(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(Sizes.dp10(context))),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(Sizes.dp10(context))),
         child: ClipRRect(
           borderRadius: BorderRadius.all(Radius.circular(Sizes.dp10(context))),
           child: GridTile(
             footer: Container(
-              color: D3FColor.whiteSemiTransparent,
+              color: D3FColors.whiteSemiTransparent,
               padding: EdgeInsets.all(Sizes.dp5(context)),
               child: Text(
                 name ?? "",
                 textAlign: TextAlign.center,
                 overflow: TextOverflow.ellipsis,
                 style: TextStyle(
-                  color: D3FColor.darkBG,
+                  color: D3FColors.darkBG,
                   fontWeight: FontWeight.bold,
                   fontSize: Sizes.dp12(context),
                 ),

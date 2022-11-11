@@ -5,10 +5,10 @@
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
-// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal
+// ignore_for_file: directives_ordering,unnecessary_import
 
-class SharedFontFamily {
-  SharedFontFamily._();
+class D3FFontFamily {
+  D3FFontFamily._();
 
   /// Font family: Raleway
   static const String raleway = 'Raleway';
