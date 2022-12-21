@@ -74,5 +74,5 @@ flutter:
         - asset: assets/fonts/SF_Compact_Display_Semibold.ttf
     - family: SfCompactBold
       fonts:
-        - asset: assets/fonts/SF_Compact_Display_Bold.ttfØ
+        - asset: assets/fonts/SF_Compact_Display_Bold.ttf
   uses-material-design: true
