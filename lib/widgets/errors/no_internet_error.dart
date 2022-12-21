@@ -8,8 +8,7 @@ class NoInternetWidget extends StatelessWidget {
   final String? message;
   final VoidCallback? onPressed;
 
-  const NoInternetWidget({Key? key, this.message, this.onPressed})
-      : super(key: key);
+  const NoInternetWidget({Key? key, this.message, this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

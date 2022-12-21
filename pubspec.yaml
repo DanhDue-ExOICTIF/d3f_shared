@@ -1,43 +1,21 @@
 name: d3f_shared
-description: d3f_shared.
-publish_to: none
-
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-#
-# This version is used _only_ for the Runner app, which is used if you just do
-# a `flutter run` or a `flutter make-host-app-editable`. It has no impact
-# on any other native host app that you embed your Flutter project into.
 version: 1.0.0+1
-
+publish_to: none
+description: d3f_shared.
 environment:
   sdk: ">=2.16.2 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
   d3f_dependency_manager:
     git:
       url: https://github.com/DanhDue-ExOICTIF/d3f_dependency_manager.git
       ref: develop
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
   flutter_lints: ^2.0.0
-  # because all runners need to add directly to each module.
-  # So we have to modify manual dev_dependencies for each module here
-  # And cannot sync all of this via d3f_dependency_manager module.
   flutter_native_splash: ^2.2.10+1
   build_runner: ^2.2.1
   json_serializable: ^6.4.1
@@ -45,79 +23,56 @@ dev_dependencies:
   freezed: ^2.1.0+1
   flutter_gen_runner: ^5.0.1
   theme_tailor: ^1.0.6
-
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+  flutter_test:
+    sdk: flutter
 
 flutter_gen:
-  output: lib/generated/ # Optional (default: lib/gen/)
-  line_length: 80   # Optional (default: 80)
-
+  output: lib/generated/
   integrations:
     flutter_svg: true
     flare_flutter: false
     rive: false
     lottie: true
-
   assets:
-    enabled: true
     outputs:
       class_name: SharedAssets
-      package_parameter_enabled: true
-      # Assets.images.chip (default style)
       style: dot-delimiter
-
+      package_parameter_enabled: true
+    enabled: true
   colors:
-    enable: true
     outputs:
       class_name: D3FColors
       style: dot-delimiter
       package_parameter_enabled: false
     inputs:
       - assets/colors/colors.xml
-
+    enable: true
   fonts:
-    enabled: true
     outputs:
       class_name: D3FFontFamily
+    enabled: true
+  line_length: 80
 
 flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
-  uses-material-design: true
+  module:
+    androidPackage: com.danhdue.d3f_shared
+    iosBundleIdentifier: com.danhdue.d3fShared
+    androidX: true
   assets:
     - assets/images/
     - assets/lotties/
-
+    - assets/jsons/
   fonts:
-    - family: Raleway
+    - family: SfCompactRegular
       fonts:
-        - asset: assets/fonts/Raleway-Regular.ttf
-        - asset: assets/fonts/Raleway-Italic.ttf
-          style: italic
-    - family: RobotoMono
+        - asset: assets/fonts/SF_Compact_Display_Regular.ttf
+    - family: SfCompactMedium
       fonts:
-        - asset: assets/fonts/RobotoMono-Regular.ttf
-        - asset: assets/fonts/RobotoMono-Bold.ttf
-          weight: 700
-    - family: Sakkal-Majalla
+        - asset: assets/fonts/SF_Compact_Display_Medium.ttf
+    - family: SfCompactSemiBold
       fonts:
-        - asset: assets/fonts/Sakkal-Majalla.ttf
-          weight: 400
-    - family: Trebuchet
+        - asset: assets/fonts/SF_Compact_Display_Semibold.ttf
+    - family: SfCompactBold
       fonts:
-        - asset: assets/fonts/Trebuchet-MS.ttf
-        - asset: assets/fonts/Trebuchet-MS-Italic.ttf
-          weight: 400
-
-  # This section identifies your Flutter project as a module meant for
-  # embedding in a native host app.  These identifiers should _not_ ordinarily
-  # be changed after generation - they are used to ensure that the tooling can
-  # maintain consistency when adding or modifying assets and plugins.
-  # They also do not have any bearing on your native host application's
-  # identifiers, which may be completely independent or the same as these.
-  module:
-    androidX: true
-    androidPackage: com.danhdue.d3f_shared
-    iosBundleIdentifier: com.danhdue.d3fShared
+        - asset: assets/fonts/SF_Compact_Display_Bold.ttfØ
+  uses-material-design: true
