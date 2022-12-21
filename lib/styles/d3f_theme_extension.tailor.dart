@@ -141,21 +141,17 @@ class D3FThemeExtension extends ThemeExtension<D3FThemeExtension> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is D3FThemeExtension &&
-            const DeepCollectionEquality()
-                .equals(background, other.background) &&
+            const DeepCollectionEquality().equals(background, other.background) &&
             const DeepCollectionEquality().equals(mainGreen, other.mainGreen) &&
             const DeepCollectionEquality().equals(red, other.red) &&
             const DeepCollectionEquality().equals(textColor, other.textColor) &&
-            const DeepCollectionEquality()
-                .equals(textLightGrey, other.textLightGrey) &&
+            const DeepCollectionEquality().equals(textLightGrey, other.textLightGrey) &&
             const DeepCollectionEquality().equals(textGrey, other.textGrey) &&
             const DeepCollectionEquality().equals(subYellow, other.subYellow) &&
-            const DeepCollectionEquality()
-                .equals(lightSilver, other.lightSilver) &&
+            const DeepCollectionEquality().equals(lightSilver, other.lightSilver) &&
             const DeepCollectionEquality().equals(honeydew, other.honeydew) &&
             const DeepCollectionEquality().equals(darkGreen, other.darkGreen) &&
-            const DeepCollectionEquality()
-                .equals(secondGreen, other.secondGreen) &&
+            const DeepCollectionEquality().equals(secondGreen, other.secondGreen) &&
             const DeepCollectionEquality().equals(cyan, other.cyan) &&
             const DeepCollectionEquality().equals(heading1, other.heading1) &&
             const DeepCollectionEquality().equals(heading2, other.heading2));
@@ -183,6 +179,5 @@ class D3FThemeExtension extends ThemeExtension<D3FThemeExtension> {
 }
 
 extension D3FThemeExtensionBuildContext on BuildContext {
-  D3FThemeExtension get d3FThemeExtension =>
-      Theme.of(this).extension<D3FThemeExtension>()!;
+  D3FThemeExtension get d3FThemeExtension => Theme.of(this).extension<D3FThemeExtension>()!;
 }

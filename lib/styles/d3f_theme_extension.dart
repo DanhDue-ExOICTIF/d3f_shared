@@ -28,7 +28,7 @@ class $_D3FThemeExtension {
   static List<Color> cyan = [D3FColors.cyan, D3FColors.cyan];
 
   static const h1TextStyle =
-      TextStyle(fontSize: 21, letterSpacing: 0.3, fontFamily: D3FFontFamily.raleway);
+      TextStyle(fontSize: 21, letterSpacing: 0.3, fontFamily: D3FFontFamily.sfCompactBold);
   static final h2TextStyle = const TextStyle(fontSize: 18).copyWith(
     fontFeatures: const [FontFeature.proportionalFigures()],
   );

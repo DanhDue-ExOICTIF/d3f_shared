@@ -5,7 +5,7 @@
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
-// ignore_for_file: directives_ordering,unnecessary_import
+// ignore_for_file: directives_ordering,unnecessary_import,implicit_dynamic_list_literal
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -26,6 +26,25 @@ class $AssetsImagesGen {
   List<dynamic> get values => [coinLogo, icSplashBackground];
 }
 
+class $AssetsJsonsGen {
+  const $AssetsJsonsGen();
+
+  /// File path: assets/jsons/notification.json
+  String get notification => 'assets/jsons/notification.json';
+
+  /// File path: assets/jsons/semester_point.json
+  String get semesterPoint => 'assets/jsons/semester_point.json';
+
+  /// File path: assets/jsons/testing_plan.json
+  String get testingPlan => 'assets/jsons/testing_plan.json';
+
+  /// File path: assets/jsons/user_object.json
+  String get userObject => 'assets/jsons/user_object.json';
+
+  /// List of all assets
+  List<String> get values => [notification, semesterPoint, testingPlan, userObject];
+}
+
 class $AssetsLottiesGen {
   const $AssetsLottiesGen();
 
@@ -41,6 +60,7 @@ class SharedAssets {
   SharedAssets._();
 
   static const $AssetsImagesGen images = $AssetsImagesGen();
+  static const $AssetsJsonsGen jsons = $AssetsJsonsGen();
   static const $AssetsLottiesGen lotties = $AssetsLottiesGen();
 }
 
@@ -156,6 +176,8 @@ class SvgGenImage {
   }
 
   String get path => _assetName;
+
+  String get keyName => 'packages/d3f_shared/$_assetName';
 }
 
 class LottieGenImage {
@@ -181,13 +203,14 @@ class LottieGenImage {
     double? height,
     BoxFit? fit,
     AlignmentGeometry? alignment,
-    String? package,
+    String? package = 'd3f_shared',
     bool? addRepaintBoundary,
     FilterQuality? filterQuality,
     void Function(String)? onWarning,
   }) {
     return Lottie.asset(
       _assetName,
+      controller: controller,
       animate: animate,
       frameRate: frameRate,
       repeat: repeat,
@@ -212,4 +235,6 @@ class LottieGenImage {
   }
 
   String get path => _assetName;
+
+  String get keyName => 'packages/d3f_shared/$_assetName';
 }
